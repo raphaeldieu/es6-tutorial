@@ -14,7 +14,7 @@ document.getElementById('calcBtn').addEventListener('click', () => {
 
   // let {monthlyPayment, monthlyRate} = calculateMonthlyPayment(principal, years, rate);
   let {monthlyPayment, monthlyRate, amortization} = calculateAmortization(principal, years, rate);
-  console.log(amortization);
+  amortization.forEach(month => console.log(month));
 
   document.getElementById("monthlyPayment").innerHTML = monthlyPayment.toFixed(2);
   document.getElementById("monthlyRate").innerHTML    = (monthlyRate * 100).toFixed(2);

@@ -21,7 +21,9 @@ document.getElementById('calcBtn').addEventListener('click', function () {
       monthlyRate = _calculateAmortizatio.monthlyRate,
       amortization = _calculateAmortizatio.amortization;
 
-  console.log(amortization);
+  amortization.forEach(function (month) {
+    return console.log(month);
+  });
 
   document.getElementById("monthlyPayment").innerHTML = monthlyPayment.toFixed(2);
   document.getElementById("monthlyRate").innerHTML = (monthlyRate * 100).toFixed(2);
